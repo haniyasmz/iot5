@@ -39,7 +39,7 @@ engine = create_engine("postgresql+psycopg2://postgres:rocky99@localhost/smart_h
 # conn = engine.raw_connection()
 # cursor = conn.cursor()
 # cursor = con.cursor()
-@st.experimental_singleton
+# @st.experimental_singleton
 def init_connection():
     return psycopg2.connect(**st.secrets.postgres)
 
