@@ -41,7 +41,7 @@ engine = create_engine("postgresql+psycopg2://postgres:rocky99@localhost/smart_h
 # cursor = con.cursor()
 @st.experimental_singleton
 def init_connection():
-    return psycopg2.connect(**st.secrets["postgres"])
+    return psycopg2.connect(**st.secrets.postgres)
 
 # def init_connection():
 #     return engine
